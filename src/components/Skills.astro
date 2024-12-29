@@ -1,0 +1,15 @@
+---
+import SectionLayout from "../layouts/SectionLayout.astro";
+import SkillsIcon from "./icons/SkillsIcon.astro";
+import SkillsItem from "./SkillsItem.astro";
+---
+
+<SectionLayout items="start">
+  <div class="flex flex-row items-center gap-x-2 pl-4 -mt-16
+  md:pl-0 
+  ld:pl-0">
+    <SkillsIcon />
+    <h2 class="pl-6 font-bold text-2xl text-emerald-500">Habilidades</h2>
+  </div>
+  <SkillsItem />
+</SectionLayout>

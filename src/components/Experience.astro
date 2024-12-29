@@ -1,0 +1,24 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+import SectionLayout from "../layouts/SectionLayout.astro";
+import ExperienceIcon from "./icons/ExperienceIcon.astro";
+---
+
+<SectionLayout items="start">
+  <div class="flex flex-row items-center gap-x-2 pl-4 md:pl-0 lg:pl-0 scroll-mt-24" id="experience">
+    <ExperienceIcon />
+    <h2 class="pl-6 font-bold text-2xl text-emerald-500">
+      Experiencia Laboral
+    </h2>
+  </div>
+
+  <div class="px-4
+        md:p-0
+        lg:p-0">
+    <ol
+      class="relative border-s border-emerald-200 dark:border-emerald-700 mt-12"
+    >
+      <ExperienceItem />
+    </ol>
+  </div>
+</SectionLayout>

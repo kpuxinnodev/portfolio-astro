@@ -1,0 +1,23 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import Experience from "../components/Experience.astro";
+import CallToAction from "../components/CallToAction.astro";
+import Projects from "../components/Projects.astro";
+import Recommendation from "../components/Recommendation.astro";
+import Skills from "../components/Skills.astro";
+---
+
+<Layout
+  title="Portfolio de Rodrigo Rodríguez - Programador y Desarrollador Web"
+  description="Rodrigo Rodríguez. Programador y Desarrollador Web. Doy visibilidad a tus proyectos de manera intuitiva y funcional."
+>
+	<main class="flex flex-col justify-center items-center bg-gradient-to-r from-slate-900 to-slate-700 overflow-x-hidden">
+		<Hero />
+		<Experience />
+		<CallToAction />
+		<Projects />
+		<Recommendation />
+		<Skills />
+	</main>
+</Layout>

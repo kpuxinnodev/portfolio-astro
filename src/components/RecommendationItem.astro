@@ -1,0 +1,89 @@
+---
+import SectionLayout from "../layouts/SectionLayout.astro";
+import Recommendations from "../data/recommendations.json";
+---
+
+<SectionLayout items="start">
+  <div class="overflow-hidden w-full mask">
+    <div class="infinite-scroll inline-flex gap-8">
+      <!-- Primer conjunto de recomendaciones -->
+      <div class="flex gap-8 min-w-max">
+        {
+          Recommendations.RECOMMENDATIONS.map(
+            ({ title, description, image, name, workspace, company }) => (
+              <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 w-[400px]">
+                <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                    {title}
+                  </h3>
+                  <p class="my-4">{description}</p>
+                </blockquote>
+                <figcaption class="flex items-center justify-center">
+                  <img class="rounded-full size-12" src={image} alt={name} />
+                  <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                    <div>{name}</div>
+                    <div class="text-sm text-3-500 dark:text-gray-400">
+                      {workspace} - {company}
+                    </div>
+                  </div>
+                </figcaption>
+              </figure>
+            )
+          )
+        }
+      </div>
+
+      <!-- Duplicado para scroll infinito -->
+      <div class="flex gap-8 min-w-max">
+        {
+          Recommendations.RECOMMENDATIONS.map(
+            ({ title, description, image, name, workspace, company }) => (
+              <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 w-[400px]">
+                <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                    {title}
+                  </h3>
+                  <p class="my-4">{description}</p>
+                </blockquote>
+                <figcaption class="flex items-center justify-center">
+                  <img class="rounded-full size-12" src={image} alt={name} />
+                  <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                    <div>{name}</div>
+                    <div class="text-sm text-gray-500 dark:text-gray-400">
+                      {workspace} - {company}
+                    </div>
+                  </div>
+                </figcaption>
+              </figure>
+            )
+          )
+        }
+      </div>
+    </div>
+  </div>
+</SectionLayout>
+
+<style>
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  .infinite-scroll {
+    animation: scroll 20s linear infinite;
+  }
+
+  .mask {
+    mask: linear-gradient(90deg, transparent, white 10%, white 80%, transparent);
+  }
+
+  .infinite-scroll:hover {
+    animation-play-state: paused;
+  }
+
+
+</style>

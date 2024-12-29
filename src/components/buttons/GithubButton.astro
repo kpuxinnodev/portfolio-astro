@@ -1,0 +1,18 @@
+---
+import Github from "../icons/Github.astro";
+
+interface Props {
+  repo: string;
+}
+
+const {repo} = Astro.props
+---
+
+<a
+  href=`https://github.com/kpuxinnodev/${repo}`
+  target="_blank"
+  rel="noopener noreferrer"
+  class="group inline-flex items-center px-2 py-2 border border-gray-600 rounded-full focus:z-10 bg-gray-800 bg-opacity-95 hover:text-emerald-500 duration-300"
+>
+  <Github />
+</a>

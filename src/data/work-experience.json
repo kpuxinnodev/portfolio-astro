@@ -1,0 +1,20 @@
+{
+  "EXPERIENCE": [
+    {
+      "company": "Camcel Ltd.",
+      "year": "2024",
+      "work": "Desarrollador Front-End",
+      "description": "Rediseño del website oficial de Camcel Ltd. Con la incorporación de tecnologías actuales de autenticación de usuarios y manejo de datos",
+      "link": true,
+      "href": "https://google.com"
+    },
+    {
+      "company": "Lito Gómez Ltd.",
+      "year": "2023",
+      "work": "Desarrollador Front-End",
+      "description": "Me incorporé al equipo de trabajo de Lito Gómez S.A. encargado de desarrollar una aplicación para el monitoreo de maquinaria.",
+      "link": false,
+      "href": ""
+    }
+  ]
+}

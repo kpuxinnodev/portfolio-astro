@@ -1,0 +1,20 @@
+---
+import SectionLayout from "../layouts/SectionLayout.astro";
+import Gmail from "./icons/Gmail.astro";
+---
+
+<SectionLayout items="center">
+  <h2 class="font-bold text-2xl text-center text-emerald-500">
+    ¿Tienes un proyecto en mente?
+  </h2>
+  <article class="flex flex-col justify-center items-center">
+    <h3>¡Hagamos de tu sueño una realidad!</h3>
+    <a
+      href="mailto:kpuxinno.dev@gmail.com"
+      rel="noopener noreferrer"
+      class="mt-6 group flex items-center px-3 py-2 border border-gray-600 rounded-full focus:z-10 bg-gray-800 bg-opacity-95 hover:text-emerald-500 duration-300 gap-y-2"
+    >
+      <Gmail /> <p class="pl-2">kpuxinno.dev@gmail.com</p>
+    </a>
+  </article>
+</SectionLayout>

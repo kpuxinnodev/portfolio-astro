@@ -1,0 +1,13 @@
+---
+
+interface Props {
+    items: string;
+  }
+  
+  const { items } = Astro.props;
+---
+
+  <section class={`flex flex-col justify-center items-${items} w-full max-w-[720px] my-16`}>
+    <slot />
+  </section>
+  

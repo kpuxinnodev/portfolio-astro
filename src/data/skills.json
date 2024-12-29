@@ -1,0 +1,14 @@
+{
+    "SKILLS": [
+        {"name": "HTML"},
+        {"name": "CSS"},
+        {"name": "JavaScript"},
+        {"name": "Astro"},
+        {"name": "Tailwind"},
+        {"name": "Vuejs"},
+        {"name": "Nodejs"},
+        {"name": "Laravel"},
+        {"name": "Git"},
+        {"name": "Docker"}
+    ]
+}

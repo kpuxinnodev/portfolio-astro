@@ -1,0 +1,85 @@
+---
+import SectionLayout from "../layouts/SectionLayout.astro";
+import GithubButton from "./buttons/GithubButton.astro";
+import NewTabButton from "./buttons/NewTabButton.astro";
+
+// -> JSON with projects
+import Projects from "../data/projects.json";
+
+// -> Icons from "/components/icons/projects"
+import AstroIcon from "./icons/projects/AstroIcon.astro";
+import TailwindIcon from "./icons/projects/TailwindIcon.astro";
+import TypeScriptIcon from "./icons/projects/TypeScriptIcon.astro"
+import HTMLIcon from "./icons/projects/HTMLIcon.astro"
+import CSSIcon from "./icons/projects/CSSIcon.astro"
+import JavaScriptIcon from "./icons/projects/JavaScriptIcon.astro"
+import NodejsIcon from "./icons/projects/NodejsIcon.astro"
+import VuejsIcon from "./icons/projects/VuejsIcon.astro";
+import LaravelIcon from "./icons/projects/LaravelIcon.astro"
+
+---
+
+<SectionLayout items="center">
+  {
+    Projects.PROJECTS.map(
+      ({
+        title,
+        description,
+        image,
+        tags,
+        github,
+        githubLink,
+        preview,
+        previewLink,
+      }) => (
+        <article class="relative ml-5 h-56 flex flex-row items-center justify-center border-t border-r border-b rounded-lg shadow border-gray-700 bg-gray-800 mb-20">
+          <img
+            class=" scale-110 object-cover w-auto rounded-lg size-60 shadow-xl shadow-black/40"
+            src={image}
+            alt={image}
+          />
+          <div class=" h-auto flex flex-col justify-start p-4 leading-normal pt-8">
+            <h3 class="mb-2 pl-5 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+              {title}
+            </h3>
+            <p class="mb-3 pl-5 text-sm font-normal text-gray-700 dark:text-gray-400">
+              {description}
+            </p>
+
+            <div class="flex flex-row flex-wrap pl-5 gap-y-2 pb-12">
+              
+              {tags.map(({ name }) => {
+                const IconComponent = {
+                  AstroIcon,
+                  TailwindIcon,
+                  TypeScriptIcon,
+                  HTMLIcon,
+                  CSSIcon,
+                  JavaScriptIcon,
+                  NodejsIcon,
+                  VuejsIcon,
+                  LaravelIcon
+                }[name + "Icon"];
+                return (
+                <p class="font-normal text-gray-700 dark:text-gray-400 flex flex-row items-center">
+                    <span class="bg-blue-100 text-emerald-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-emerald-900 dark:text-emerald-300 flex flex-row items-center gap-x-1">
+                      {IconComponent && <IconComponent size="18" />}
+                      {name}
+                    </span>
+                  </p>
+                  
+                );
+              })}
+              
+            </div>
+
+            <div class="absolute flex flex-row bottom-3 right-3 gap-2">
+              {github && <GithubButton repo={githubLink} />}
+              {preview && <NewTabButton href={previewLink} />}
+            </div>
+          </div>
+        </article>
+      )
+    )
+  }
+</SectionLayout>

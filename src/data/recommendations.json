@@ -1,0 +1,29 @@
+{
+    "RECOMMENDATIONS": [
+      {
+        "title": "Excelente trabajo",
+        "description": "Desarrolla ideas creativas y las transmite con facilidad a sus compañeros.",
+        "image": "/project.jpg",
+        "name": "David Guriérrez Samora",
+        "workspace": "CEO",
+        "company": "Camcel Ltd."
+      },
+      {
+        "title": "¡Dicho y hecho!",
+        "description": "Gran desarrollo de ideas e implementación de las mismas. Resultado de alto nivel.",
+        "image": "/project.jpg",
+        "name": "Ángel Castro Rodríguez",
+        "workspace": "Vicepresidente",
+        "company": "Lito Gómez Ltd."
+      },
+      {
+        "title": "Trabajo asombroso",
+        "description": "Ha dado la talla a la hora de resolver nuestro problema y consigo ha brindado una solución perfecta.",
+        "image": "/project.jpg",
+        "name": "Antonella García Giménez",
+        "workspace": "Supervisora general",
+        "company": "SAME Ltd."
+      }
+    ]
+  }
+  

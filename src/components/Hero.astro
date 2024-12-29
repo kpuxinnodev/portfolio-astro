@@ -1,0 +1,50 @@
+---
+import GithubButton from "./buttons/GithubButton.astro";
+import LinkedInButton from "./buttons/LinkedInButton.astro";
+import CurriculumButton from "./buttons/CurriculumButton.astro";
+---
+
+<section
+  class="flex flex-col justify-center items-center w-full max-w-[800px] my-16
+  md:flex-row md:my-28
+  lg:flex-row lg:my-28"
+>
+  <picture
+    class="flex justify-center items-center p-12 w-[260px]
+  md:w-[360px] lg:w-[360px]"
+  >
+    <img
+      class="rounded-full size-80 object-cover min-w-[200px] object-[45%_0%]"
+      src="/profile.webp"
+      alt="profile.webp"
+    />
+  </picture>
+  <article class="flex flex-col">
+    <h1 class="text-3xl font-bold
+    px-4 md:p-0 lg:p-0">
+      Hola, soy <span class="text-emerald-500">Rodrigo Rodríguez</span>
+    </h1>
+    <h2
+      class="text-2xl font-bold text-emerald-500 underline underline-offset-4
+      pl-4 md:p-0 lg:p-0"
+    >
+      Front-End Developer
+    </h2>
+    <h2 class="text-xl mt-6
+    px-4 md:p-0 lg:p-0">
+      <span class="font-bold">+5 años de experiencia.</span>
+      <span class="text-emerald-400">De Melo, Uruguay.</span>
+    </h2>
+    <h3 class="text-base opacity-85
+    px-4 md:p-0 lg:p-0">
+      Soy egresado en <span class="font-bold">Ingeniería en Computación</span> y
+      disfruto de desarrollar páginas web innovadoras y funcionales.
+    </h3>
+
+    <div class="flex flex-row gap-6 mt-4 h-auto pl-4 md:p-0 lg:p-0">
+      <GithubButton repo="" />
+      <LinkedInButton />
+      <CurriculumButton />
+    </div>
+  </article>
+</section>

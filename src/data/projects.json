@@ -1,0 +1,35 @@
+{
+  "PROJECTS": [
+    {
+      "title": "Digital Notes",
+      "description": "Aplicación web de gestión de tareas, individuales y compartidas. Basado en Trello. Con creación de grupos y gestión de miembros.",
+      "image": "/project.jpg",
+
+      "tags": [
+        {"name": "Vuejs"},
+        {"name": "Laravel"}
+    ],
+
+      "github": true,
+      "githubLink": "digital-notes",
+      "preview": true,
+      "previewLink": "https://google.com"
+    },
+    {
+      "title": "Cloud Palette",
+      "description": "¡Genera tu paleta de colores con la ayuda de IA! Elige un color y ella te mostrará las mejores combinaciones para el mismo.",
+      "image": "/project.jpg",
+
+      "tags": [
+        {"name": "Astro"},
+        {"name": "Tailwind"},
+        {"name": "Nodejs"}
+    ],
+
+      "github": true,
+      "githubLink": "",
+      "preview": true,
+      "previewLink": "https://google.com"
+    }
+  ]
+}

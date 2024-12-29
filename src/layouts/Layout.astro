@@ -1,0 +1,45 @@
+---
+// Supports weights 100-900
+import "@fontsource-variable/inter";
+
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+interface Props {
+  title: string;
+  description: string;
+}
+
+const { title, description } = Astro.props;
+---
+
+<!doctype html>
+<html lang="es" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <Header />
+    <slot />
+    <Footer />
+  </body>
+</html>
+
+<style>
+  :root {
+    color-scheme: light dark;
+  }
+
+  html,
+  body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    font-family: "Inter Variable", sans-serif;
+  }
+</style>

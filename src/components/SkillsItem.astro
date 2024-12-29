@@ -1,0 +1,105 @@
+---
+import SectionLayout from "../layouts/SectionLayout.astro";
+
+// -> Icons from "/components/icons/projects"
+import AstroIcon from "./icons/projects/AstroIcon.astro";
+import TailwindIcon from "./icons/projects/TailwindIcon.astro";
+import TypeScriptIcon from "./icons/projects/TypeScriptIcon.astro";
+import HTMLIcon from "./icons/projects/HTMLIcon.astro";
+import CSSIcon from "./icons/projects/CSSIcon.astro";
+import JavaScriptIcon from "./icons/projects/JavaScriptIcon.astro";
+import NodejsIcon from "./icons/projects/NodejsIcon.astro";
+import VuejsIcon from "./icons/projects/VuejsIcon.astro";
+import LaravelIcon from "./icons/projects/LaravelIcon.astro";
+import GitIcon from "./icons/projects/GitIcon.astro";
+import DockerIcon from "./icons/projects/DockerIcon.astro";
+
+import skills from "../data/skills.json";
+---
+
+<SectionLayout items="start">
+  <div class="overflow-hidden w-full mask">
+    <div class="infinite-scroll inline-flex gap-4">
+      <!-- Primer conjunto de recomendaciones -->
+      <div class="flex gap-4 min-w-max">
+        {
+          skills.SKILLS.map(({ name }) => {
+            const IconComponent = {
+              AstroIcon,
+              TailwindIcon,
+              TypeScriptIcon,
+              HTMLIcon,
+              CSSIcon,
+              JavaScriptIcon,
+              NodejsIcon,
+              VuejsIcon,
+              LaravelIcon,
+              GitIcon,
+              DockerIcon
+            }[name + "Icon"];
+            return (
+              <figure class="flex flex-col items-center justify-center p-8 text-center size-auto">
+                {IconComponent && <IconComponent size="62" />}
+                {name}
+              </figure>
+            );
+          })
+        }
+      </div>
+
+      <!-- Duplicado para scroll infinito -->
+      <div class="flex gap-4 min-w-max">
+        <div class="flex gap-4 min-w-max">
+          {
+            skills.SKILLS.map(({ name }) => {
+              const IconComponent = {
+                AstroIcon,
+                TailwindIcon,
+                TypeScriptIcon,
+                HTMLIcon,
+                CSSIcon,
+                JavaScriptIcon,
+                NodejsIcon,
+                VuejsIcon,
+                LaravelIcon,
+                GitIcon,
+                DockerIcon
+              }[name + "Icon"];
+              return (
+                <figure class="flex flex-col items-center justify-center p-8 text-center size-auto">
+                  {IconComponent && <IconComponent size="62" />}
+                  {name}
+                </figure>
+              );
+            })
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</SectionLayout>
+
+<style>
+  @keyframes scroll-reverse {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .infinite-scroll {
+    animation: scroll-reverse 20s linear infinite;
+  }
+
+  .mask {
+    mask: linear-gradient(
+      90deg,
+      transparent,
+      white 10%,
+      white 80%,
+      transparent
+    );
+  }
+</style>
