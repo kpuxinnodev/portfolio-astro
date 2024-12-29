@@ -1,3 +1,10 @@
+### TODO List
+- [ ] Adaptar a móviles: Header.astro, ProjectsItem.astro, RecommendationsItem.astro, SkillsItem.astro.
+- [ ] Optimizar las imágenes .webp y la precarga de las mísmas.
+- [ ] Realizar test de rendimiento y accesibilidad
+
+
+<!--
 # Astro Starter Kit: Basics
 
 ```sh
@@ -46,3 +53,4 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+-->
