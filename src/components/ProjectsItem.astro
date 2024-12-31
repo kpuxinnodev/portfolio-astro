@@ -32,21 +32,33 @@ import LaravelIcon from "./icons/projects/LaravelIcon.astro"
         preview,
         previewLink,
       }) => (
-        <article class="relative ml-5 h-56 flex flex-row items-center justify-center border-t border-r border-b rounded-lg shadow border-gray-700 bg-gray-800 mb-20">
+        <article class="relative max-w-sm w-80 bg-white border border-gray-200 rounded-lg items-center justify-center shadow dark:bg-gray-800 dark:border-gray-700
+        md:max-w-none md:w-auto md:ml-5 md:h-56 md:flex md:flex-row md:border-t md:border-r md:border-b mb-20
+        lg:max-w-none lg:w-auto lg:ml-5 lg:h-56 lg:flex lg:flex-row lg:border-t lg:border-r lg:border-b lg:mb-20">
           <img
-            class=" scale-110 object-cover w-auto rounded-lg size-60 shadow-xl shadow-black/40"
+            class="rounded-t-lg w-auto object-cover size-60 mx-auto
+            md:scale-110 md:rounded-lg md:shadow-xl md:shadow-black/40
+            lg:scale-110 lg:rounded-lg lg:shadow-xl lg:shadow-black/40"
             src={image}
             alt={image}
           />
-          <div class=" h-auto flex flex-col justify-start p-4 leading-normal pt-8">
-            <h3 class="mb-2 pl-5 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
+          <div class="h-auto flex flex-col justify-start p-4 leading-normal pt-4
+          md:pt-8
+          lg:pt-8">
+            <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white
+            md:pl-5
+            lg:pl-5">
               {title}
             </h3>
-            <p class="mb-3 pl-5 text-sm font-normal text-gray-700 dark:text-gray-400">
+            <p class="mb-3 text-sm font-normal text-gray-700 dark:text-gray-400
+            md:pl-5
+            lg:pl-5">
               {description}
             </p>
 
-            <div class="flex flex-row flex-wrap pl-5 gap-y-2 pb-12">
+            <div class="flex flex-row flex-wrap gap-y-2 pb-12
+            md:pl-5
+            lg:pl-5">
               
               {tags.map(({ name }) => {
                 const IconComponent = {
@@ -73,7 +85,9 @@ import LaravelIcon from "./icons/projects/LaravelIcon.astro"
               
             </div>
 
-            <div class="absolute flex flex-row bottom-3 right-3 gap-2">
+            <div class="absolute flex flex-row bottom-3 right-3 gap-2
+            md:absolute md:flex md:flex-row md:bottom-3 md:right-3 md:gap-2
+            lg:absolute lg:flex lg:flex-row lg:bottom-3 lg:right-3 lg:gap-2">
               {github && <GithubButton repo={githubLink} />}
               {preview && <NewTabButton href={previewLink} />}
             </div>
