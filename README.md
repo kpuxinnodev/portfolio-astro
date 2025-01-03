@@ -1,11 +1,12 @@
 ### TODO List
-Adaptar a móviles: 
+#### Adaptar a móviles: 
 - [ ] Header.astro
 - [x] ProjectsItem.astro
 - [ ] RecommendationsItem.astro
 - [ ] SkillsItem.astro.
-- Optimizar las imágenes .webp y la precarga de las mísmas.
-- Realizar test de rendimiento y accesibilidad
+
+#### Optimizar las imágenes .webp y la precarga de las mísmas.
+#### Realizar test de rendimiento y accesibilidad.
 
 
 <!--
