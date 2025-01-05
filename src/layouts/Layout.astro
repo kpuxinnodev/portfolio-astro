@@ -23,7 +23,7 @@ const { title, description } = Astro.props;
     <meta name="description" content={description} />
     <title>{title}</title>
   </head>
-  <body>
+  <body class="bg-gradient-to-r from-slate-900 to-slate-700">
     <Header />
     <slot />
     <Footer />
@@ -34,12 +34,12 @@ const { title, description } = Astro.props;
   :root {
     color-scheme: light dark;
   }
-
   html,
   body {
     margin: 0;
     height: 100%;
     width: 100%;
     font-family: "Inter Variable", sans-serif;
+    color: white;
   }
 </style>

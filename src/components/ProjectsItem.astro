@@ -32,7 +32,7 @@ import LaravelIcon from "./icons/projects/LaravelIcon.astro"
         preview,
         previewLink,
       }) => (
-        <article class="relative max-w-sm w-80 bg-white border border-gray-200 rounded-lg items-center justify-center shadow dark:bg-gray-800 dark:border-gray-700
+        <article class="relative max-w-sm w-80 rounded-lg items-center justify-center shadow bg-gray-800 border-gray-700
         md:max-w-none md:w-auto md:ml-5 md:h-56 md:flex md:flex-row md:border-t md:border-r md:border-b mb-20
         lg:max-w-none lg:w-auto lg:ml-5 lg:h-56 lg:flex lg:flex-row lg:border-t lg:border-r lg:border-b lg:mb-20">
           <img
@@ -45,12 +45,12 @@ import LaravelIcon from "./icons/projects/LaravelIcon.astro"
           <div class="h-auto flex flex-col justify-start p-4 leading-normal pt-4
           md:pt-8
           lg:pt-8">
-            <h3 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white
+            <h3 class="mb-2 text-2xl font-bold tracking-tight text-white
             md:pl-5
             lg:pl-5">
               {title}
             </h3>
-            <p class="mb-3 text-sm font-normal text-gray-700 dark:text-gray-400
+            <p class="mb-3 text-sm font-normal text-gray-400
             md:pl-5
             lg:pl-5">
               {description}
@@ -73,8 +73,8 @@ import LaravelIcon from "./icons/projects/LaravelIcon.astro"
                   LaravelIcon
                 }[name + "Icon"];
                 return (
-                <p class="font-normal text-gray-700 dark:text-gray-400 flex flex-row items-center">
-                    <span class="bg-blue-100 text-emerald-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded dark:bg-emerald-900 dark:text-emerald-300 flex flex-row items-center gap-x-1">
+                <p class="font-normal text-gray-400 flex flex-row items-center">
+                    <span class="text-xs font-medium me-2 px-2.5 py-0.5 rounded bg-emerald-900 text-emerald-300 flex flex-row items-center gap-x-1">
                       {IconComponent && <IconComponent size="18" />}
                       {name}
                     </span>

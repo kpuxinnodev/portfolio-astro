@@ -2,7 +2,7 @@
 export default {
   content: ["./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}"],
   theme: {
-    darkMode: ["class"],
+    darkMode: 'class',
     extend: {
       animation: {
         "infinite-scroll": "scroll 25s linear infinite",
@@ -19,8 +19,8 @@ export default {
           to: { transform: "translateX(0)" },
         },
         leftScroll: {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-50%)" },
+          '0%': { transform: "translateX(0)" },
+          '100%': { transform: "translateX(calc(-50% - 1rem))" }, // Ajustamos por el gap
         },
       },
       maskImage: {

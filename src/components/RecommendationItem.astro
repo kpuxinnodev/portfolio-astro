@@ -4,25 +4,25 @@ import Recommendations from "../data/recommendations.json";
 ---
 
 <SectionLayout items="start">
-  <div class="overflow-hidden w-full mask">
-    <div class="animate-recommendation-scroll pause-on-hover inline-flex gap-8">
+  <div class="overflow-hidden w-full flex items-center justify-center md:mask-fade md:block md:items-start md:justify-normal lg:mask-fade lg:block lg:items-start lg:justify-normal">
+    <div class="overflow-x-scroll pause-on-hover gap-8 md:animate-recommendation-scroll md:inline-flex md:overflow-x-hidden lg:animate-recommendation-scroll lg:overflow-x-hidden lg:inline-flex">
       <!-- Primer conjunto de recomendaciones -->
-      <div class="flex gap-8 min-w-max">
+      <div class="flex flex-col gap-8 min-w-max md:flex-row lg:flex-row">
         {
           Recommendations.RECOMMENDATIONS.map(
             ({ title, description, image, name, workspace, company }) => (
-              <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 w-[400px]">
-                <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              <figure class="flex flex-col items-center justify-center px-2 py-6 md:p-8 lg:p-8 text-center border rounded-lg shadow-sm bg-gray-800 border-gray-700 md:w-[400px] lg:w-[400px] w-80">
+                <blockquote class="max-w-2xl mx-auto mb-4 lg:mb-8 text-gray-400">
+                  <h3 class="text-lg font-semibold text-white">
                     {title}
                   </h3>
                   <p class="my-4">{description}</p>
                 </blockquote>
                 <figcaption class="flex items-center justify-center">
                   <img class="rounded-full size-12" src={image} alt={name} />
-                  <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                  <div class="space-y-0.5 font-medium text-white text-left rtl:text-right ms-3">
                     <div>{name}</div>
-                    <div class="text-sm text-3-500 dark:text-gray-400">
+                    <div class="text-sm text-emerald-500">
                       {workspace} - {company}
                     </div>
                   </div>
@@ -34,22 +34,22 @@ import Recommendations from "../data/recommendations.json";
       </div>
 
       <!-- Duplicado para scroll infinito -->
-      <div class="flex gap-8 min-w-max">
+      <div class="hidden md:flex lg:flex flex-col gap-8 min-w-max md:flex-row lg:flex-row">
         {
           Recommendations.RECOMMENDATIONS.map(
             ({ title, description, image, name, workspace, company }) => (
-              <figure class="flex flex-col items-center justify-center p-8 text-center bg-white border border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700 w-[400px]">
-                <blockquote class="max-w-2xl mx-auto mb-4 text-gray-500 lg:mb-8 dark:text-gray-400">
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+              <figure class="flex flex-col items-center justify-center md:p-8 lg:p-8 text-center border rounded-lg shadow-sm bg-gray-800 border-gray-700 md:w-[400px] lg:w-[400px] w-80">
+                <blockquote class="max-w-2xl mx-auto mb-4 lg:mb-8 text-gray-400">
+                  <h3 class="text-lg font-semibold text-white">
                     {title}
                   </h3>
                   <p class="my-4">{description}</p>
                 </blockquote>
                 <figcaption class="flex items-center justify-center">
                   <img class="rounded-full size-12" src={image} alt={name} />
-                  <div class="space-y-0.5 font-medium dark:text-white text-left rtl:text-right ms-3">
+                  <div class="space-y-0.5 font-medium text-white text-left rtl:text-right ms-3">
                     <div>{name}</div>
-                    <div class="text-sm text-gray-500 dark:text-gray-400">
+                    <div class="text-sm text-emerald-500">
                       {workspace} - {company}
                     </div>
                   </div>
@@ -62,28 +62,3 @@ import Recommendations from "../data/recommendations.json";
     </div>
   </div>
 </SectionLayout>
-
-<style>
-  @keyframes scroll {
-    0% {
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(-50%);
-    }
-  }
-
-  .infinite-scroll {
-    animation: scroll 20s linear infinite;
-  }
-
-  .mask {
-    mask: linear-gradient(90deg, transparent, white 10%, white 80%, transparent);
-  }
-
-  .infinite-scroll:hover {
-    animation-play-state: paused;
-  }
-
-
-</style>
