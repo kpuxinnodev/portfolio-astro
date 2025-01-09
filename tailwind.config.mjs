@@ -5,15 +5,10 @@ export default {
     darkMode: 'class',
     extend: {
       animation: {
-        "infinite-scroll": "scroll 25s linear infinite",
-        "reverse-infinite-scroll": "rightScroll 10s linear infinite",
+        "skills-scroll": "rightScroll 10s linear infinite",
         "recommendation-scroll": "leftScroll 20s linear infinite",
       },
       keyframes: {
-        scroll: {
-          from: { transform: "translateX(0)" },
-          to: { transform: "translateX(-100%)" },
-        },
         rightScroll: {
           from: { transform: "translateX(-100%)" },
           to: { transform: "translateX(0)" },
@@ -24,7 +19,7 @@ export default {
         },
       },
       maskImage: {
-        fade: "linear-gradient(90deg, transparent, white 10%, white 80%, transparent)",
+        fade: "linear-gradient(90deg, transparent, white 20%, white 70%, transparent)",
       },
     },
     variants: {

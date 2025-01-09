@@ -5,9 +5,10 @@
 - [x] RecommendationsItem.astro
 - [x] SkillsItem.astro.
 
-#### Optimizar las imágenes .webp y la precarga de las mísmas.
-#### Realizar test de rendimiento y accesibilidad.
+#### [x] Optimizar las imágenes .webp y la precarga de las mísmas.
+#### [ ] Realizar test de rendimiento y accesibilidad.
 
+#### [ ] Crear un Readme.md como la gente.
 
 <!--
 # Astro Starter Kit: Basics

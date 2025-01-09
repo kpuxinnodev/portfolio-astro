@@ -13,10 +13,13 @@ import CurriculumButton from "./buttons/CurriculumButton.astro";
     class="flex justify-center items-center p-12 w-[260px]
   md:w-[360px] lg:w-[360px]"
   >
+
     <img
-      class="rounded-full size-80 object-cover min-w-[200px] object-[45%_0%]"
+      class="rounded-full size-80 object-cover min-w-[200px] object-[45%_0%] animate-pulse bg-gray-200"
+      loading="lazy"
+      onload="this.classList.remove('animate-pulse', 'bg-gray-200')"
       src="/profile.webp"
-      alt="profile.webp"
+      alt="Rodrigo Rodríguez - Foto"
     />
   </picture>
   <article class="flex flex-col">

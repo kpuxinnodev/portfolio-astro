@@ -2,16 +2,32 @@
 
 ---
 
-<header class="h-14 w-full flex flex-row justify-center items-center p-4 fixed z-10 bg-gradient-to-r from-slate-900 to-slate-700">
-    <div class="w-[720px] flex flex-row justify-between items-center">
-        <img class="size-10 rounded-full" 
-        src="/kpuxinno-icon.svg" alt="kpuxinnodev">
-         <nav class="flex flex-row gap-8
+<header
+  class="h-14 w-full flex flex-row justify-center items-center p-4 fixed z-10 bg-gradient-to-r from-slate-900 to-slate-700"
+>
+  <div class="w-[720px] flex flex-row justify-between items-center">
+    <img
+      class="size-10 rounded-full animate-pulse bg-gray-200"
+      src="/kpuxinno-icon.svg"
+      alt="kpuxinnodev-icon"
+      loading="lazy"
+      onload="this.classList.remove('animate-pulse', 'bg-gray-200')"
+    />
+    <nav class="flex flex-row gap-8
          md:gap-16
          lg:gap-16">
-             <a class="font-bold text-white hover:text-emerald-500 transition-colors duration-300" href="#inicio">Inicio</a>
-             <a class="font-bold text-white hover:text-emerald-500 transition-colors duration-300" href="#experiencia">Experiencia</a>
-             <a class="font-bold text-white hover:text-emerald-500 transition-colors duration-300" href="#proyectos">Proyectos</a>
-         </nav>
-    </div>
+      <a
+        class="font-bold text-white hover:text-emerald-500 transition-colors duration-300"
+        href="#inicio">Inicio</a
+      >
+      <a
+        class="font-bold text-white hover:text-emerald-500 transition-colors duration-300"
+        href="#experiencia">Experiencia</a
+      >
+      <a
+        class="font-bold text-white hover:text-emerald-500 transition-colors duration-300"
+        href="#proyectos">Proyectos</a
+      >
+    </nav>
+  </div>
 </header>

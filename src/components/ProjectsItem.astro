@@ -34,13 +34,15 @@ import LaravelIcon from "./icons/projects/LaravelIcon.astro"
       }) => (
         <article class="relative max-w-sm w-80 rounded-lg items-center justify-center shadow bg-gray-800 border-gray-700
         md:max-w-none md:w-auto md:ml-5 md:h-56 md:flex md:flex-row md:border-t md:border-r md:border-b mb-20
-        lg:max-w-none lg:w-auto lg:ml-5 lg:h-56 lg:flex lg:flex-row lg:border-t lg:border-r lg:border-b lg:mb-20">
+        lg:max-w-none lg:w-auto lg:ml-5 lg:h-56 lg:flex lg:flex-row lg:border-t lg:border-r lg:border-b lg:my-14">
           <img
-            class="rounded-t-lg w-auto object-cover size-60 mx-auto
+            class="rounded-t-lg w-auto object-cover size-60 mx-auto animate-pulse bg-gray-200
             md:scale-110 md:rounded-lg md:shadow-xl md:shadow-black/40
             lg:scale-110 lg:rounded-lg lg:shadow-xl lg:shadow-black/40"
             src={image}
             alt={image}
+            loading="lazy"
+            onload="this.classList.remove('animate-pulse', 'bg-gray-200')"
           />
           <div class="h-auto flex flex-col justify-start p-4 leading-normal pt-4
           md:pt-8
