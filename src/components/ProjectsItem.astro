@@ -1,10 +1,9 @@
 ---
-import SectionLayout from "../layouts/SectionLayout.astro";
+import SectionLayout from "@/layouts/SectionLayout.astro";
+import Projects from "@/data/projects.json";
+
 import GithubButton from "./buttons/GithubButton.astro";
 import NewTabButton from "./buttons/NewTabButton.astro";
-
-// -> JSON with projects
-import Projects from "../data/projects.json";
 
 // -> Icons from "/components/icons/projects"
 import AstroIcon from "./icons/projects/AstroIcon.astro";
@@ -16,7 +15,6 @@ import JavaScriptIcon from "./icons/projects/JavaScriptIcon.astro"
 import NodejsIcon from "./icons/projects/NodejsIcon.astro"
 import VuejsIcon from "./icons/projects/VuejsIcon.astro";
 import LaravelIcon from "./icons/projects/LaravelIcon.astro"
-
 ---
 
 <SectionLayout items="center">

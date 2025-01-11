@@ -6,6 +6,6 @@
 - [x] SkillsItem.astro.
 
 #### [x] Optimizar las imágenes .webp y la precarga de las mísmas.
-#### [ ] Realizar test de rendimiento y accesibilidad (lighthouse).
+#### [x] Realizar test de rendimiento y accesibilidad (lighthouse).
 
 #### [ ] Crear un Readme.md como la gente.
